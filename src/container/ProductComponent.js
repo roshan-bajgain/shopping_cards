@@ -6,7 +6,9 @@ const ProductComponent = () => {
   const renderlist = product.map((product) =>{
     const {id,title,image,price,category} = product;
     return(
-      <div className="main_container" key={id}>
+      <div className="four column wide" key={id}>
+        <div className="ui link cards">
+          <div className="card">
             <div className="image">
               <img src={image} alt="Title" />
             </div>
@@ -14,7 +16,9 @@ const ProductComponent = () => {
               <div className="header">{title}</div>
               <div className="price">$ {price}</div>
               <div className="category">{category}</div>
-             </div>
+            </div>
+          </div>
+        </div>
       </div>
     )
   });
